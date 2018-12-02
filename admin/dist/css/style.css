@@ -1,0 +1,8 @@
+
+    
+    @media print{
+        p{
+            page-break-after:always;
+            margin-left:20px;
+        }
+    }
