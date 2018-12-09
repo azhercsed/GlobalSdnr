@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h3><a href="download.php">Download</a></h3>
+    <h3><a href="download.php">Click to Download</a></h3>
 </body>
 </html>
