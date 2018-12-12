@@ -15,6 +15,7 @@ $uid='DOC'.$uid;
 
         
             <div class="row">
+            <div id="result">
                 <div class="col-lg-12">
                     <h3 class="page-header"> Registration Plan</h3>
                 </div>
@@ -24,15 +25,36 @@ $uid='DOC'.$uid;
             <!-- /.row -->
 <div class="row" style="padding-bottom:50px;">
     <form role="form" id="form" >
-                                        <div id="result">
+                                        
                                         
                                         </div>
                                         
-                                        <div class="form-group col-md-12">
+                                        <div class="form-group col-md-3">
                                             <label>Document Number</label>
                                             <input class="form-control" placeholder="Document Number" name="doc" id="doc" value='<?php echo $uid;?>' readonly>
                                         </div>
 
+                                        <div class="form-group col-md-3">
+                                            <label>Vendor ID</label>
+                                            <input class="form-control" name="vendorid" id="vendorid" readonly>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Vendor</label>
+                                            <input class="form-control" placeholder="Vendor" name="vendor" id="vendor" autocomplete="off">
+                                        </div>
+
+
+                                        <div class="form-group col-md-6">
+                                            <label>Vendee Name</label>
+                                            <input class="form-control" type="text" id="vname" name="vname" required>
+                                        </div>
+                                    
+                                                
+                                        <div class="form-group col-md-6">
+                                        <label>Vendee Father's Name</label>
+                                                        
+                                            <input class="form-control" type="text" id="fname" name="fname" required>
+                                        </div>
                                         <div class="form-group col-md-3">
                                             <label>Date Created</label>
                                             <input class="form-control" type="date" name="date" id="date" value='<?php echo date('Y-m-d');?>'>
@@ -40,12 +62,12 @@ $uid='DOC'.$uid;
                                     
                                         <div class="form-group col-md-3">
                                             <label>Plot Number</label>
-                                            <input class="form-control" placeholder="Plot Number" name="pno" id="pno" type="number">
+                                            <input class="form-control" placeholder="Plot Number" name="plotno" id="plotno" type="number">
                                         </div>
 
                                         <div class="form-group col-md-3">
-                                            <label>Area</label>
-                                            <input class="form-control" placeholder="Area" name="area" id="area" type="text">
+                                            <label>Extent SqYds</label>
+                                            <input class="form-control" placeholder="Area" name="extent" id="extent" type="text">
                                         </div>
 
                                         <div class="form-group col-md-3">
@@ -53,30 +75,16 @@ $uid='DOC'.$uid;
                                             <input class="form-control" placeholder="Cons-Value" name="cvalue" id="cvalue" type="text">
                                         </div>
 
-                                        <div class="form-group col-md-3">
-                                            <label>Vendor ID</label>
-                                            <input class="form-control" name="vendorid" id="vendorid" readonly>
-                                        </div>
-                                        <div class="form-group col-md-9">
-                                            <label>Vendor</label>
-                                            <input class="form-control" placeholder="Vendor" name="vendor" id="vendor" autocomplete="off">
-                                        </div>
+                                    
+                                     
                                         <!-- <div class="form-group col-md-10">
                                             <label>Vendor Detail</label>
                                             <textarea rows="5" cols="50" class="form-control" placeholder="Vendor Detail" name="vdetail" id="vdetail"></textarea>
                                         </div> -->
 
 
-                                        <div class="form-group col-md-3">
-                                            <label>Vendee ID</label>
-                                            <input class="form-control" name="vendeeid" id="vendeeid" readonly>
-                                        </div>
-                                        <div class="form-group col-md-9">
-                                            <label>Vendee</label>
-                                            <input class="form-control" placeholder="vendee" name="vendee" id="vendee" autocomplete="off">
-                                        </div>
+                                   
 
-                                      
                                         
                                         <!-- <div class="form-group col-md-3">
                                             <label> </label>
@@ -115,8 +123,8 @@ $uid='DOC'.$uid;
                     </div>
                  
                     <div class="btn-group" role="group" aria-label="..." style="margin-bottom:10px">
-                        <input type="submit" class="btn btn-default btn-success btn-sm" name="submit" id="submit" value="submit"></input>
-                        <input type="button" class="btn btn-default btn-success btn-sm" name="preview" id="preview" value="Preview"></input>
+                        <input type="submit" class="btn btn-default btn-success btn-md" name="submit" id="submit" value="Save"></input>
+                        <input type="button" class="btn btn-default btn-info btn-md" name="preview" id="preview" value="Print"></input>
                     </div>
                 </div>
 
@@ -149,7 +157,7 @@ $uid='DOC'.$uid;
 
 
 
-
+<!--
          <script type="text/javascript">
                             $.get("includes/search_vendee.inc.php", function(data){
                             $("#vendee").typeahead({ source:data,
@@ -164,7 +172,7 @@ $uid='DOC'.$uid;
                             },'json');
                         </script> 
 
-
+-->
 
                 <script type="text/javascript" src="../js/myfabric.js"></script>
 

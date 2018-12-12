@@ -18,7 +18,7 @@ while($row=mysqli_fetch_assoc($result)){
     }else{
         $co='D/O';
     }*/
-    array_push($auto,$row['vname']);
+    array_push($auto,$row['vendor']);
     
 }
 //array_push($auto,"azhar","ammara");

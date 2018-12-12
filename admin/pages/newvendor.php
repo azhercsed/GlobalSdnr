@@ -16,11 +16,12 @@ $result=mysqli_query($con,$sql);
 
 
 ?>
-<div id="msg"></div>
+
        
             <div class="row">
+            <div id="result"></div>
                 <div class="col-lg-12">
-                    <h1 class="page-header"> New Vendor</h1>
+                    <h2 class="page-header"> New Vendor</h2>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -28,7 +29,7 @@ $result=mysqli_query($con,$sql);
             <div class="row">
             <form role="form" id="form">
                     
-
+<!--
                         <div class="form-group col-md-4">
                             <label>Vendor Name</label>
                             <input class="form-control" type="text" id="vname" name="vname" required>
@@ -39,41 +40,33 @@ $result=mysqli_query($con,$sql);
                                            
                             <input class="form-control" type="text" id="fname" name="fname" required>
                         </div>
-
-                        <div class="form-group col-md-4">
-                        <label>Age</label>
-                                        
-                            <input class="form-control" type="number" id="vage" name="vage" required>
-                    
-                        </div>
+-->
+                       
                           <div class="form-group col-md-12">
-                            <label>Vendor Other Details</label>
-                            <textarea class="form-control" type="text" id="odetail" name="odetail" placeholder="Optional" style="display:none;"></textarea>
-                            <div class="btn-group pull-right" role="group" aria-label="..." style="margin-bottom:10px;">
+                            <label>Vendor & Other Details</label>
+                            <textarea class="form-control" type="text" id="vodetail" name="vodetail" placeholder="Optional" style="display:none;"></textarea>
+                            <div class="btn-group pull-right" role="group" aria-label="..." style="margin-bottom:20px;">
                                 <input type="button" class="btn btn-default" id="b" value="B">
                                 <input type="button" class="btn btn-default" id="i" value="I">
                                 <input type="button" class="btn btn-default" id="u" value="U">
                                 <input type="button" class="btn btn-default" id="size" value="Size">
 
 
-                                <!-- <input class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" value="FontSize &#9660;">
-                                        <span class="caret"></span></input>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#"><h1>Heading 1</h1></a></li>
-                                        <li><a href="#"><h2>Heading 2</h2></a></li>
-                                        <li><a href="#"><h3>Heading 3</h3></a></li>
-                                        <li><a href="#"><h4>Heading 4</h4></a></li>
-                                        <li><a href="#"><h5>Heading 5</h5></a></li>
-                                        <li><a href="#"><h6>Heading 6</h6></a></li>
-                                        
-                                        
-                                    </ul> -->
+                 
+                            </div> 
+                            <div contenteditable="true" class="form-control" id="iframe" name="iframe" style="overflow:scroll;padding:10px 10px;height:100px;font-size:14px;line-height:1.428;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif">
+                            
+                            
                             </div>
-                            <iframe class="form-control" id="iframe" name="iframe" style="height:100px;font-size:14px;line-height:1.428;padding:0px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif"></iframe>
                         </div>
                       
                                   
-                      
+                        <div class="form-group col-md-4">
+                        <label>Age</label>
+                                        
+                            <input class="form-control" type="number" id="vage" name="vage" required>
+                    
+                        </div>
                       
                         <div class="form-group col-md-4">
                         <label>Occupation</label>
@@ -81,7 +74,7 @@ $result=mysqli_query($con,$sql);
                             <input class="form-control" type="text" id="vocc" name="vocc" required>
                         </div>
 
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-4">
                         <label>Company</label>
                                            
                             <input class="form-control" type="text" id="vcomp" name="vcomp" required>
@@ -174,7 +167,7 @@ $result=mysqli_query($con,$sql);
                         
                         <div class="col-md-12">
                             <div class="pull-right">
-                        <button type="submit" class="btn btn-default btn-primary" name="submit" id="submit"><i class="fa fa-print"></i> Submit</button>
+                        <input type="submit" class="btn btn-default btn-primary" name="vsubmit" id="vsubmit" value="Submit"/>
                         <button type="reset" id="reset" class="btn btn-default"><i class="fa fa-window-restore"></i> Reset</button>
                         </div>
                         <br><br><br><br>
@@ -187,6 +180,7 @@ $result=mysqli_query($con,$sql);
                 
             </div>
 <script src="../js/iframe.js"></script>
+<script src="../js/myfabric.js"></script>
             <!-- <script type="text/javascript">
             $(document).ready(function(){
 

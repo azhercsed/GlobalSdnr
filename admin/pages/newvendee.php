@@ -25,13 +25,20 @@ $result=mysqli_query($con,$sql);
             </div>
             <!-- /.row -->
             <div class="row">
-            <form role="form" method="post" action="includes/newvendee.inc.php">
+            <div id="result"></div>
+            <form role="form" id="form">
                     
 
                         
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-8">
                             <label>Vendor</label>
                             <input class="form-control" type="text" id="vendor" name="vendor" autocomplete="off">
+                        </div>
+
+
+                        <div class="form-group col-md-4">
+                            <label>VendorID</label>
+                            <input class="form-control" type="text" id="vendorid" name="vendorid" readonly>
                         </div>
                       
                         <div class="form-group col-md-4">
@@ -53,22 +60,27 @@ $result=mysqli_query($con,$sql);
                        
                         </div>
                         <div class="form-group col-md-4">
-                        <label>Extent</label>
+                        <label>Extent sqYds</label>
                                            
-                            <input class="form-control" type="number" id="extent" name="extent" required>
+                            <input class="form-control" type="number" id="extenty" name="extenty" required>
                         </div>
-
+                        <div class="form-group col-md-4">
+                        <label>Extent sqMtrs</label>
+                                           
+                            <input class="form-control" type="number" id="extentm" name="extentm" required>
+                        </div>
                         <div class="form-group col-md-4">
                         <label>Consideration Value</label>
                                            
                             <input class="form-control" type="number" id="cv" name="cv" required>
                         </div>
-                        
-                        
+                        <div class="col-md-12">
+                        <input type="submit" class="btn btn-success pull-right" name="s" id="s" value="Submit"/>
+                        </div>
                         </form>    
                             
 <!-- ----------------------------start of canvas-------------------------------------- -->
-
+<!--
                 <div class="col-md-12">
                     <div class="btn-group" role="group" aria-label="..." style="margin-bottom:10px">
                         <input type="button" class="btn btn-primary btn-sm" id="line" value="Line"></input>
@@ -88,7 +100,7 @@ $result=mysqli_query($con,$sql);
                         <input type="button" class="btn btn-default btn-sm" id="fromJson" value="fromJSON"></input>
                     </div>
                     <div class="btn-group" role="group" aria-label="..." style="margin-bottom:10px">
-                        <button type="submit" class="btn btn-default btn-success" name="submit" ><i class="fa fa-print"></i> Submit</button>
+                        <input type="submit" class="btn btn-default btn-success" name="submit1" id="submit1" value="Submit"/>
                     </div>
                 </div>
 
@@ -102,7 +114,7 @@ $result=mysqli_query($con,$sql);
                
                 
             </div>
-
+-->
 
                      <script type="text/javascript">
                             $.get("includes/search_vendor.inc.php", function(data){

@@ -224,16 +224,45 @@ $('#submit').on('click',function(e){
         method:'post',
         dataType:'text',
         url:'../pages/includes/doc.ajax.inc.php',
-        data:$('#form').serialize()+'&svg='+svg,
+        data:$('#form').serialize()+'&svg='+svg+'&table=document',
         success:function(data){
             
                 $('#result').html(data);
-                location.reload();
+                
+                console.log(data);
+               //ocation.reload();
     
         }
     })
 });
     });
+
+
+
+    $('#iframe').on("paste",function(){
+//alert("hello");
+    });
+   
+    $('#vsubmit').on('click',function(e){
+       e.preventDefault();
+       var value=$('#iframe').html();
+       //console.log(value);
+     $('#vodetail').text(value);
+  $.ajax({
+            method:'post',
+            dataType:'text',
+            url:'../pages/includes/doc.ajax.inc.php',
+            data:$('#form').serialize()+'&table=vendor',
+            success:function(data){
+                
+                    $('#result').html(data);
+                    console.log(data);
+                    //location.reload();
+        
+            }
+        })
+    });
+
 
 $('#preview').on('click',function(){
     var docn=document.getElementById('doc').value;
@@ -243,6 +272,9 @@ $('#preview').on('click',function(){
         console.log(canvas.toSVG());
     });
 
+
+
+   
 //createGrid();
 
 // function createGrid(){

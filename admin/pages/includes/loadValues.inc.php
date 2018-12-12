@@ -6,7 +6,7 @@ $item=mysqli_escape_string($con,$_POST['item']);
 
 
 
-$sql="SELECT id FROM $tablename WHERE vname like '%$item%';";
+$sql="SELECT id FROM $tablename WHERE vendor like '%$item%';";
 if($result=mysqli_query($con,$sql)){
     $row= mysqli_fetch_assoc($result);
     echo $row['id']; 
